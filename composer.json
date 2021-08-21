@@ -1,0 +1,54 @@
+{
+    "name": "hicka/pos",
+    "description": "Billing and invoicing.",
+    "keywords": [
+        "hicka",
+        "pos"
+    ],
+    "homepage": "https://github.com/hicka/pos",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Hicker",
+            "email": "hickr@me.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hicka\\Pos\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Hicka\\Pos\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hicka\\Pos\\PosServiceProvider"
+            ],
+            "aliases": {
+                "Pos": "Hicka\\Pos\\PosFacade"
+            }
+        }
+    }
+}
