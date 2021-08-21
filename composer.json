@@ -45,10 +45,7 @@
         "laravel": {
             "providers": [
                 "Hicka\\Pos\\PosServiceProvider"
-            ],
-            "aliases": {
-                "Pos": "Hicka\\Pos\\PosFacade"
-            }
+            ]
         }
     }
 }
